@@ -1,0 +1,106 @@
+:root {
+  --primary-color: white;
+  --yellow: #fee715ff;
+  --black: #;
+  --font-size--clamp: 26px, 3vw, 14px;
+  --font-size--body-text: 18px;
+}
+#content {
+  padding: 0px 150px;
+}
+
+/* @counter-style section {
+  system: decimal-leading-zero;
+  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+  suffix: ". ";
+} */
+#main-section {
+  counter-reset: section 0;
+  margin: 70px auto;
+  max-width: 1000px;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+.numbered-heading {
+  display: flex;
+  /* counter-reset: section; */
+
+  -webkit-box-align: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 0px 40px;
+  width: 100%;
+  font-size: clamp(var(--font-size--clamp));
+  white-space: nowrap;
+}
+
+.numbered-heading::before {
+  position: relative;
+  counter-increment: section 1;
+
+  content: counter(section, decimal-leading-zero) ".";
+  margin-right: 10px;
+  color: var(--yellow);
+  /* font-family: var(--font-mono); */
+  font-size: clamp(var(--font-size--clamp));
+  font-weight: 400;
+}
+.numbered-heading::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--yellow);
+}
+#about-me {
+  max-width: 1000px;
+  margin: auto;
+}
+.about-me-inner {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 50px;
+}
+.about-me-desc {
+  text-align: left;
+  font-size: var(--font-size--body-text);
+}
+.skill-list > li {
+  display: flex;
+  list-style: none;
+  font-size: 16px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.skill-list {
+  margin: 30px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  gap: 20px 10px;
+  padding: 0;
+}
+#job-experience {
+  max-width: 700px;
+  margin: auto;
+  padding: 100px 0;
+}
+@media only screen and (max-width: 1080px) {
+  #content {
+    padding: 0 100px;
+  }
+  .numbered-heading::after {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #content {
+    padding: 0 50px;
+  }
+  .numbered-heading::after {
+    width: 100%;
+  }
+}
