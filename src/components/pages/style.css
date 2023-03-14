@@ -4,6 +4,7 @@
   --black: #;
   --font-size--clamp: 26px, 3vw, 14px;
   --font-size--body-text: 18px;
+  --gray: rgb(128, 133, 89);
 }
 #content {
   padding: 0px 150px;
@@ -54,7 +55,7 @@
   width: 300px;
   height: 1px;
   margin-left: 20px;
-  background-color: var(--yellow);
+  background-color: var(--gray);
 }
 #about-me {
   max-width: 1000px;

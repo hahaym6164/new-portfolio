@@ -37,10 +37,18 @@
 .tabs-title {
   text-transform: capitalize !important;
   width: 170px;
+  align-items: flex-start !important;
 }
 .job-period {
   font-size: var(--font-size-x-small);
 }
 [role="tabpanel"] {
   width: 630px;
+  transition: opacity 1s;
+}
+.hidden {
+  height: 0;
+  /* display: none; */
+  width: 0;
+  opacity: 0;
 }

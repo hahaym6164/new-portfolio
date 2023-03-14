@@ -8,17 +8,26 @@ import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators, State } from "../state";
 import DoneOutlinedIcon from "@mui/icons-material/DoneOutlined";
+import { makeStyles } from "@mui/material";
+
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
 }
+// const useStyles = makeStyles({
+//   desktopIndicator: {
+//     left: "0px",
+//   },
+// });
+// type Classes = ReturnType<typeof useStyles>;
 
-const bgColor = "#101820ff";
+// const classes : any = useStyles();
 
 const color = {
   bg: "#101820ff",
   yellow: "#fee715ff",
+  gray: "",
 };
 function TabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;
@@ -26,8 +35,8 @@ function TabPanel(props: TabPanelProps) {
   return (
     <div
       role="tabpanel"
+      className={value === index ? "" : "hidden"}
       style={{ backgroundColor: color.bg }}
-      hidden={value !== index}
       id={`vertical-tabpanel-${index}`}
       aria-labelledby={`vertical-tab-${index}`}
       {...other}
@@ -97,6 +106,7 @@ export default function JobExperienceList() {
       ],
     },
   ];
+
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     switchJob(newValue);
   };
@@ -115,13 +125,24 @@ export default function JobExperienceList() {
         <Tabs
           className="tabs-title "
           textColor="inherit"
-          style={{ backgroundColor: color.bg, overflow: "unset" }}
+          style={{
+            overflow: "unset",
+          }}
           orientation="vertical"
+          TabIndicatorProps={{
+            style: {
+              backgroundColor: color.yellow,
+              left: 0,
+            },
+          }}
           variant="scrollable"
           value={job.value}
           onChange={handleChange}
           aria-label="Vertical tabs example"
-          sx={{ borderRight: 1, borderColor: "divider" }}
+          sx={{
+            borderRight: 1,
+            borderColor: "divider",
+          }}
         >
           {JobExpList.map((i, index) => (
             <Tab
