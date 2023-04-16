@@ -1,8 +1,28 @@
+:root {
+  --primary-color: white;
+  --yellow: #fee715ff;
+  --white: #fffae6;
+  --black: #101820ff;
+
+  --font-family-regular: "Maven Pro", sans-serif;
+  --dark-white: #c1bdad;
+  --font-size--clamp: 26px, 3vw, 14px;
+  --font-size--small-clamp: clamp(16px, 5vw, 24px);
+  --font-size--body-text: 18px;
+  --font-size--mobile-title: 24px;
+  --font-size--main-big-clamp: clamp(40px, 8vw, 80px);
+  --font-size--sub-big-clamp: clamp(33px, 9vw, 70px);
+  --gray: rgb(128, 133, 89);
+  --border-radius: 10px;
+  --transition: 0.2s;
+}
+html{
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-size: var(--font-size--body-text);
+  font-family: var(--font-family-regular);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,6 +32,6 @@ code {
     monospace;
 }
 body {
-  background: #101820ff;
-  color: white;
+  background-color: var(--black);
+  color: var(--dark-white);
 }

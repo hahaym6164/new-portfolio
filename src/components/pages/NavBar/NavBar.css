@@ -1,0 +1,37 @@
+.header {
+  backdrop-filter: blur(10px);
+}
+.header-link::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: relative;
+  bottom: 1px;
+  background-color: var(--yellow);
+  transition: 0.2s all;
+  opacity: 0.5;
+}
+.header-link:hover::after {
+  width: 100%;
+}
+.header-link {
+  scroll-behavior: smooth;
+  color: var(--dark-white);
+  margin: auto 10px !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  text-decoration: none;
+}
+.header-link:hover {
+  color: var(--yellow);
+}
+.header-link::before {
+  content: counter(item, decimal-leading-zero) ".";
+  margin-right: 5px;
+  color: var(--yellow);
+  counter-increment: item 1;
+
+  font-size: var(--fz-xxs);
+  text-align: right;
+}

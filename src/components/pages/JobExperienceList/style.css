@@ -1,0 +1,98 @@
+:root {
+  --yellow: #fee715ff;
+  --font-size--clamp: 26px, 3vw, 14px;
+  --font-size--body-text: 18px;
+  --font-size--small: 14px;
+  --font-size-x-small: 12px;
+}
+
+.job-link {
+  color: var(--yellow);
+  display: inline-block;
+
+  text-decoration: none;
+}
+.duty-list > li {
+  list-style: none;
+  margin-top: 20px;
+  text-align: left;
+  margin-bottom: 10px;
+  display: flex;
+}
+.duty-list > li > svg {
+  font-size: var(--font-size--small);
+  margin-right: 20px;
+  color: var(--yellow);
+}
+.duty-list {
+  font-size: var(--font-size--small);
+  padding: 0;
+}
+.space {
+  margin: 20px;
+}
+.align-left {
+  text-align: left;
+}
+.tabs-title {
+  text-transform: capitalize !important;
+}
+.tabs-desktop {
+  align-items: flex-start !important;
+  width: 170px;
+}
+.job-period {
+  font-size: var(--font-size-x-small);
+}
+[role="tabpanel"] {
+  width: 630px;
+  transition: opacity 1s;
+  padding: 0 30px;
+}
+.hidden {
+  height: 0;
+  /* display: none; */
+  padding: 0;
+  width: 0;
+  opacity: 0;
+}
+.mobile {
+  display: none;
+}
+.desktop {
+  display: block;
+}
+@media only screen and (max-width: 480px) {
+  .mobile {
+    display: block !important;
+  }
+  .desktop {
+    display: none !important;
+  }
+}
+.mobile-tabpanel {
+  width: 100%;
+  padding: 30px 0;
+}
+.mobile > .MuiTabs-scroller {
+  width: 90vw;
+}
+/* a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
+  transition: 0.2s all;
+} */
+.job-link::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: relative;
+  bottom: 1px;
+  background-color: var(--yellow);
+  transition: 0.2s all;
+  opacity: 0.5;
+}
+.job-link:hover::after {
+  width: 100%;
+}

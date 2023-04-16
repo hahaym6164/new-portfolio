@@ -1,0 +1,93 @@
+:root {
+  --backGoundColor: black;
+  --imgWidthClamp: 200px, 100%, 300px;
+}
+.searchBar {
+  margin: 30px 10px;
+}
+.searchInput {
+  padding: 10px;
+  font-size: 16px;
+  line-height: 16px;
+  border: 0;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.searchInput:focus-visible {
+  outline: none;
+}
+.searchBut {
+  line-height: 12px;
+  padding: 12px;
+  background: url("https://static.thenounproject.com/png/101791-200.png")
+    no-repeat left;
+  background-size: 20px;
+}
+
+.bookList {
+  margin: auto;
+  width: 100%;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.bookList,
+.singleBook,
+.bookCover {
+  display: flex;
+}
+.singleBook {
+  width: 300px;
+  gap: 20px;
+}
+
+.bookCover {
+  position: relative;
+  width: 70%;
+}
+.bookCover img {
+  align-items: center;
+  margin: 0;
+  object-fit: cover;
+  background-color: white;
+  position: relative;
+  top: 50%;
+  height: 150px;
+  width: 100px;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.info {
+  min-width: 200px;
+  text-align: left;
+}
+.info > * {
+  margin: 0;
+  padding: 10px;
+}
+.authors:last-child label {
+  display: none;
+}
+#submit {
+  cursor: pointer;
+  margin-left: 10px;
+  border: 1px solid #e3e3e3;
+}
+.main-content {
+  padding: 30px;
+}
+.MuiTablePagination-root,
+.MuiTablePagination-selectIcon {
+  display: flex;
+  justify-content: center;
+  color: var(--dark-white) !important;
+  fill: var(--dark-white) !important;
+}
+.link {
+  color: var(--dark-white);
+  margin: auto 10px !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  text-decoration: none;
+
+}

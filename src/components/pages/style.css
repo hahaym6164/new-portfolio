@@ -1,33 +1,50 @@
-:root {
-  --primary-color: white;
-  --yellow: #fee715ff;
-  --black: #;
-  --font-size--clamp: 26px, 3vw, 14px;
-  --font-size--body-text: 18px;
-  --gray: rgb(128, 133, 89);
+h1 {
+  margin: 0;
 }
 #content {
   padding: 0px 150px;
 }
+.italic {
+  font-style: italic;
+}
+.intro-text {
+  text-align: left;
+}
+.text {
+  color: var(--dark-white);
+  line-height: 1.5;
+}
+.intro-text > h1 {
+  font-size: var(--font-size--main-big-clamp);
+}
+.sub-big > h1 {
+  margin-top: 10px;
+  font-size: var(--font-size--sub-big-clamp);
+}
+.yellow {
+  color: var(--yellow);
+}
+.main-intro > * > p {
+  font-size: var(--font-size--body-text);
+  max-width: 60vw;
+  line-height: 2;
+}
 
-/* @counter-style section {
-  system: decimal-leading-zero;
-  symbols: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
-  suffix: ". ";
-} */
 #main-section {
+  color: var(--white);
   counter-reset: section 0;
   margin: 70px auto;
   max-width: 1000px;
+  padding-top: 50px;
   display: flex;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
+  height: 80vh;
+}
+.dark-white {
+  color: var(--dark-white);
 }
 .numbered-heading {
   display: flex;
-  /* counter-reset: section; */
-
+  color: var(--white);
   -webkit-box-align: center;
   align-items: center;
   position: relative;
@@ -87,7 +104,6 @@
 #job-experience {
   max-width: 700px;
   margin: auto;
-  padding: 100px 0;
 }
 @media only screen and (max-width: 1080px) {
   #content {
@@ -104,4 +120,61 @@
   .numbered-heading::after {
     width: 100%;
   }
+  .about-me-inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #content {
+    padding: 0 25px;
+  }
+  .main-intro > * > p {
+    max-width: 100%;
+    line-height: 2;
+  }
+}
+.mobile-tabpanel > div > div > div {
+  font-size: var(--font-size--mobile-title);
+}
+section {
+  padding: 100px 0;
+}
+#my-project {
+  margin: 0 30px;
+}
+section.activeSection {
+  transform: none !important;
+  opacity: 1;
+  transition: 1s all;
+}
+
+section:not(#main-section) {
+  transform: translateY(50px);
+}
+section {
+  opacity: 0;
+  scroll-margin-top: 50px;
+}
+.numbered-heading.small-heading::after {
+  display: none;
+}
+.numbered-heading.small-heading {
+  font-size: 16px;
+  color: var(--yellow);
+  display: block;
+  margin-bottom: 20px;
+}
+.numbered-heading.small-heading::before {
+  font-size: 16px;
+}
+#contact-me {
+  max-width: 600px;
+  margin: auto;
+}
+.title {
+  font-size: clamp(40px, 5vw, 60px);
+  margin: 20px;
 }
