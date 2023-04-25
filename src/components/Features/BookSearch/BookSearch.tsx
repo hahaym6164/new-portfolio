@@ -98,7 +98,7 @@ const BookSearch = () => {
 
         <ClipLoader
           color={"#fee715ff"}
-          loading={loading && book.bookList.length == 0}
+          loading={book.status === "loading"}
           size={50}
           aria-label="Loading Spinner"
           data-testid="loader"
@@ -117,7 +117,11 @@ const BookSearch = () => {
                   />
                 </div>
                 <div className="info">
-                  <h4>{i.title}</h4>
+                  <h4>
+                    {i.title.length > 50
+                      ? i.title.slice(0, 50) + "....."
+                      : i.title}
+                  </h4>
 
                   <p>
                     Published: <span>{i.first_publish_year}</span>

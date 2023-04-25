@@ -1,5 +1,6 @@
 import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
+import { useRef } from "react";
 import Button from "@mui/material/Button";
 import Menu, { MenuProps } from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -12,18 +13,22 @@ interface DropDownProps {
     url: string;
   }[];
   name: string;
+  toggle?: Function;
 }
 
 export default function DropDown(props: DropDownProps) {
-
   const { tabs = [], name } = props;
+  const { toggle } = props;
+  const ref1 = useRef<HTMLButtonElement>(null);
+
   return (
     <>
-      <div style={{ margin: "16px 0" }}>
+      <div style={{ margin: "auto 0px" }}>
         <PopupState variant="popover" popupId="demo-popup-menu">
           {(popupState) => (
             <React.Fragment>
               <Button
+                ref={ref1}
                 style={{
                   textTransform: "capitalize",
                 }}
@@ -33,21 +38,26 @@ export default function DropDown(props: DropDownProps) {
               >
                 {name} <ArrowDropDownIcon />
               </Button>
-              <Menu {...bindMenu(popupState)}>
+              <Menu className="dropdown-menu" {...bindMenu(popupState)}>
                 {tabs.map((i) => (
-                  <MenuItem key={i.name}>
-                    <Button
-                      style={{
-                        textTransform: "capitalize",
-                        padding: "0",
-                      }}
-                      onClick={popupState.close}
-                      sx={{ color: "var(--black)" }}
-                      to={i.url || ""}
-                      component={Link}
-                    >
-                      {i.name}
-                    </Button>
+                  <MenuItem
+                    style={{
+                      textTransform: "capitalize",
+                    }}
+                    onClick={() => {
+                      if (typeof toggle === "function") toggle(false);
+                      return popupState.close();
+                    }}
+                    sx={{
+                      color: "var(--black)",
+                      padding: "10px",
+                      justifyContent: "center",
+                    }}
+                    to={i.url || ""}
+                    component={Link}
+                    key={i.name}
+                  >
+                    {i.name}
                   </MenuItem>
                 ))}
               </Menu>

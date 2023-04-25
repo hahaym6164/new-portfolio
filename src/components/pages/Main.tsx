@@ -26,10 +26,8 @@ function Main() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        // console.log( "entry", entries);
         entries.forEach((entry) => {
           if (entry.isIntersecting) entry.target.classList.add("activeSection");
-          console.log(entry.target.className, "tar");
         });
       },
       {
@@ -110,10 +108,7 @@ function Main() {
         <h2 className="numbered-heading">My Job Experience</h2>
         <JobExperienceList />
       </section>
-      {/* <section ref={ref4} id="my-project">
-        <h2 className="numbered-heading">Project I've built</h2>
-        <MyProjects></MyProjects>
-      </section> */}
+
       <section ref={ref5} id="contact-me">
         <h2 className="numbered-heading small-heading">What's next?</h2>
         <h2 className="title">Get In Touch</h2>
@@ -122,7 +117,11 @@ function Main() {
           want to know me better. My inbox is always open. I will get back to
           you as soon as I can.
         </p>
-        <MyButton variant="outlined" href="mailto:peteryingming@gmail.com">
+        <MyButton
+          style={{ margin: "20px" }}
+          variant="outlined"
+          href="mailto:peteryingming@gmail.com"
+        >
           Say Hi
         </MyButton>
       </section>
