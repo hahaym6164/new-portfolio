@@ -15,9 +15,9 @@ function Home() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/cal" element={<Calculator />} />
-          <Route path="/pokeDex" element={<PokeDex />} />
+          <Route path="/PokeDex" element={<PokeDex />} />
 
-          <Route path="/bookSearch" element={<BookSearch />} />
+          <Route path="/BookSearch" element={<BookSearch />} />
         </Routes>
         <Sidebar />
       </div>

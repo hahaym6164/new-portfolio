@@ -60,11 +60,10 @@
     width: 80%;
   }
 }
-.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root,
-.css-1v2lvtn-MuiPaginationItem-root {
+.MuiPaginationItem-circular {
   color: var(--dark-white) !important;
 }
-.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+.MuiPaginationItem-circular.Mui-selected {
   background-color: var(--yellow) !important;
   color: var(--black) !important;
 }
