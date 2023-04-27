@@ -123,15 +123,18 @@ const BookSearch = () => {
                       : i.title}
                   </h4>
 
-                  <p>
-                    Published: <span>{i.first_publish_year}</span>
+                  <p className="book-info">
+                    Published: <span className="years">{i.first_publish_year}</span>
                   </p>
-                  <p>
+                  <p className="book-info">
                     Authors:
-                    {/* {i.author_name && i.author_name.map(name =>
-                                        <span className="authors" key={book.nameKey++}> {name} <label>/</label></span>
-
-                                    )} */}
+                    {i.author_name &&
+                      i.author_name.map((name: any, index: number) => (
+                        <span className="authors" key={name + index}>
+                          {" "}
+                          {name} <label>/</label>
+                        </span>
+                      ))}
                   </p>
                 </div>
               </div>
