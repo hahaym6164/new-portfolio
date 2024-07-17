@@ -55,14 +55,27 @@ export default function JobExperienceList() {
   const JobExpList = [
     {
       jobTitle: "Front End developer",
+      companyName: "eCampusOntario",
+      period: "June 2023 - April 2024",
+      companyWeb: "https://www.ecampusontario.ca/",
+      jobDesc: [
+        "Spearhead the development of 20+ websites using React, Angular, and WordPress, enhancing user engagement and conversion rates.",
+        "Collaborate closely with UX designers to implement user-friendly interfaces.",
+        "Lead the Template Part Library Project in WordPress.",
+        "Utilize JavaScript, TypeScript, React, Angular, NgRx,Redux, CSS, HTML, and PHP for efficient web development",
+      ],
+    },
+    {
+      jobTitle: "Front End developer",
       companyName: "BMO",
       period: "April 2022 - Feb 2023",
       companyWeb: "https://www.bmo.com/main/personal",
       jobDesc: [
-        "Work with vanila Javascript modify the BMO pages as request using Adobe Target",
-        "Write clean, high efficient code for the change requests in BMO home page.",
-        "Unit test and debug for writtien code",
-        "Working with React.js producing reusable component by creating react library.",
+        "Contributed to feature additions and web applications within an Agile environment using JavaScript, jQuery, CSS, HTML, and React.",
+        "Conducted unit testing, debugging, and collaborated with the Quality Assurance team to maintain code integrity.",
+        "Developed a Component Library using npm packages for code reusability.",
+        "Ensured code compliance with responsive design and accessibility standards under the bank policy.",
+        "Collaborated with UX/UI designers to implement features and new campaign events.",
       ],
     },
     {
@@ -72,9 +85,9 @@ export default function JobExperienceList() {
       companyWeb: "https://signaturemedispa.com/",
 
       jobDesc: [
-        "Maintenance and managing over 6 websites under our company name using wordpress, shopify and React",
-        "Creating tools that provide high performance for reducing repeating work",
-        "Problem solving all the potential problem on the websites",
+        "Building and maintenance E-commerce websites that  created  over 400k gross income  to the company",
+        "Integrated Google Map API to the Reusable component",
+        "Addressing critical website issues with a keen focus on problem-solving excellence.",
       ],
     },
     {
@@ -87,6 +100,8 @@ export default function JobExperienceList() {
         "Creating Web app using React and Angular use clean and maintainable code",
         "Integrated Google Place api with review system.",
         "Unit test and debug the website in development.",
+        "Led the development of a MEAN stack online shopping project (MongoDB, Express, Angular, Nodejs).",
+        "Utilized JavaScript, React, TypeScript, Angular, Nodejs, TypeORM, and MongoDB for end-to-end project execution.",
       ],
     },
     {
