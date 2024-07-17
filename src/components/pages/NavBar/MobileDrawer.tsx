@@ -62,7 +62,7 @@ export default function MobileDrawer(props: MobileDrawerProps) {
         <ListItem disablePadding>
           <ListItemButton style={{ marginTop: "30px", marginLeft: "10%" }}>
             <a
-              className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-15baowo-MuiButtonBase-root-MuiButton-root"
+              className="my-button"
               style={{ padding: "10px 20px", marginLeft: "10px" }}
               target="_blank"
               href="https://docs.google.com/document/d/11zg7zaL7jbxSVUAFXa8uv1tIHmGUcuhYqng4Ry_YrA4/edit"
@@ -76,7 +76,10 @@ export default function MobileDrawer(props: MobileDrawerProps) {
   );
   React.useEffect(() => {
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 900) setState(false);
+      if (window.innerWidth > 900) {
+        func(false);
+        setState(false);
+      }
     });
   }, []);
   return (
