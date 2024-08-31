@@ -5,6 +5,7 @@ import "./style.css";
 import MyProjects from "./MyProjects/MyProjects";
 import JobExperienceList from "./JobExperienceList/JobExperienceList";
 import MyButton from "../CustomStyle/MyButton";
+import ProjectList from "../ProejctList/ProjectList";
 
 function Main() {
   const [ref1, ref2, ref3, ref4, ref5] = [
@@ -18,6 +19,9 @@ function Main() {
   const skillLists = [
     "React",
     "Javascript (ES6+)",
+    "Nextjs",
+    "Tailwind",
+    "Angular",
     "Node.js",
     "Html5",
     "Typescript",
@@ -107,6 +111,11 @@ function Main() {
       <section ref={ref3} id="job-experience">
         <h2 className="numbered-heading">My Job Experience</h2>
         <JobExperienceList />
+      </section>
+
+      <section ref={ref4} id="my-project">
+        <h2 className="numbered-heading">My Proejct</h2>
+        <ProjectList />
       </section>
 
       <section ref={ref5} id="contact-me">
