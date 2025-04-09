@@ -1,6 +1,7 @@
 .cardlist-wrapper {
   display: flex;
-  justify-content: space-evenly;
-  align-items: stretch; /* Ensures all items stretch to the height of the container */
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
   height: 100%; /* Optional, ensures container is defined in height */
 }

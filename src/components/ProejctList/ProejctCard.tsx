@@ -84,7 +84,7 @@ const CardWrapper = styled.div<CardProps>`
 `;
 const StyledWrapper = styled.div`
   .card-wrapper {
-    width: 40%;
+    width: 400px;
   }
   .card::before {
     content: "";
